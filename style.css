@@ -2,24 +2,6 @@ body {
   background-color: rgb(243, 242, 239);
 }
 
-/* header,
-footer {
-  margin: 4px;
-  padding: 2px;
-  border: 1px solid blue;
-}
-
-#content div,
-#side-menu section {
-  margin: 4px;
-  padding: 2px;
-  border: 1px solid red;
-}
-
-#side-menu section {
-  border: 1px solid green;
-} */
-
 html {
   height: 100%;
 }
@@ -125,9 +107,3 @@ td {
   color: #334455;
   background-color: #fff;
 }
-
-
-
-/* #linkedin {
-  text-align: center;
-} */
