@@ -8,30 +8,29 @@ function show(id) {
     el.style.display = '';
 }
 
-function showPageHome() {
+function hideAllPages(){
+    hide('home');
     hide("skills");
     hide("languages");
     hide("projects");
+}
+
+function showPageHome() {
+    hideAllPages();
     show('home');
 }
 
 function showSkillsPage() {
-    hide("home");
-    hide("languages");
-    hide("projects");
+    hideAllPages();
     show('skills');
 }
 
 function showLanguagesPage() {
-    hide("home");
-    hide("skills");
-    hide("projects");
+    hideAllPages();
     show('languages');
 }
 
 function showProjectsPage() {
-    hide("home");
-    hide("languages");
-    hide("skills");
+    hideAllPages();
     show("projects");
 }
