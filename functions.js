@@ -1,63 +1,43 @@
-function skills() {
-    var page = document.getElementById('skills');
-    page.style.display = '';
+function hide(id) {
+    var el = document.getElementById(id);
+    el.style.display = 'none';
 }
 
-function hideHome() {
-    var home = document.getElementById('home');
-    home.style.display = 'none';
-}
-
-function hideLanguages () {
-    var languages = document.getElementById('languages');
-    languages.style.display = 'none';
-}
-
-function showSkillsPage() {
-    // var page = document.getElementById('skills');
-    // page.style.display = '';
-    skills();
-
-    hideHome();
-    hideLanguages();
-    // var home = document.getElementById('home');
-    // home.style.display = 'none';
-    // var languages = document.getElementById('languages');
-    // languages.style.display = 'none';
-}
-
-function showLanguagesPage() {
-    var languages = document.getElementById('languages');
-    languages.style.display = '';
-
-    var home = document.getElementById('home');
-    home.style.display = 'none';
-    var page = document.getElementById('skills');
-    page.style.display = 'none';
-    var project = document.getElementById("projects");
-    project.style.display = 'none';
-}
-
-function showProjectsPage() {
-    var project = document.getElementById("projects");
-    project.style.display = '';
-
-    var home = document.getElementById('home');
-    home.style.display = 'none';
-    var languages = document.getElementById('languages');
-    languages.style.display = 'none';
-    var page = document.getElementById('skills');
-    page.style.display = 'none';
+function show(id) {
+    var el = document.getElementById(id);
+    el.style.display = '';
 }
 
 function showPageHome() {
-    var home = document.getElementById('home');
-    home.style.display = '';
+    hide("skills");
+    hide("languages");
+    hide("projects");
 
-    var languages = document.getElementById('languages');
-    languages.style.display = 'none';
-    var page = document.getElementById('skills');
-    page.style.display = 'none';
-    var project = document.getElementById("projects");
-    project.style.display = 'none';
+    show('home');
+    
+}
+
+function showSkillsPage() {
+    hide("home");
+    hide("languages");
+    hide("projects");
+
+    show('skills');
+    
+}
+
+function showLanguagesPage() {
+    hide("home");
+    hide("skills");
+    hide("projects");
+
+    show('languages');
+}
+
+function showProjectsPage() {
+    hide("home");
+    hide("languages");
+    hide("skills");
+
+    show("projects");
 }
