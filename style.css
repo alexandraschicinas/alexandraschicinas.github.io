@@ -15,8 +15,38 @@ body {
 
 header {
   flex: 1;
-  margin:16px;
-  padding: 0px 24px;
+  /* margin:16px; */
+  /* padding: 0px 24px; */
+}
+
+#header-wraper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+}
+
+#my-picture {
+  padding: 5px;
+  width: 108px;
+  height: 108px;
+}
+
+#my-picture img {
+  border-radius: 50%;
+  border: 6px solid #fff;
+}
+
+#header-info {
+  flex: 1;
+  padding: 10px;
+} 
+
+#job-title {
+  color: #334455;
+  margin: 5px 0;
+  font-weight: bold;
+  font-size: 1.2em;
 }
 
 #content {
@@ -54,6 +84,10 @@ footer a {
   padding: 0 5px;
 }
 
+a {
+  font-size: 20px;
+}
+
 #motto {
   text-align: center;
   font-size: 20px;
@@ -83,9 +117,9 @@ td {
 
 #top-meniu-bar {
   margin: 16px 0;
-  padding: 24px;
+  padding: 14px;
   background-color: #334455;
-  border-radius: 4px;
+  /* border-radius: 4px; */
   text-align: center;
   color: #ffff;
 }
@@ -106,4 +140,5 @@ td {
 #top-meniu-bar a:hover {
   color: #334455;
   background-color: #fff;
+
 }
