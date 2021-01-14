@@ -12,25 +12,20 @@ function showPageHome() {
     hide("skills");
     hide("languages");
     hide("projects");
-
     show('home');
-    
 }
 
 function showSkillsPage() {
     hide("home");
     hide("languages");
     hide("projects");
-
     show('skills');
-    
 }
 
 function showLanguagesPage() {
     hide("home");
     hide("skills");
     hide("projects");
-
     show('languages');
 }
 
@@ -38,6 +33,5 @@ function showProjectsPage() {
     hide("home");
     hide("languages");
     hide("skills");
-
     show("projects");
 }
