@@ -13,7 +13,7 @@ function hideAllPages(){
 //        initial;     conditie;       post-executie
     for(var i = 0; i < pagesIds.length; i++) {
             hide(pagesIds[i]);
-    }
+    } 
 }
 
 function showPageHome() {
