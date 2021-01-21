@@ -14,10 +14,10 @@ function hideAllPages(){
     var pagesIds = pages.map(function(page){
             return  page.id;
     });
-
-    for(var i = 0; i < pagesIds.length; i++) {
-        hide(pagesIds[i]);
-    } 
+    pagesIds.forEach(function(pageId){
+        console.info("hey", pageId);
+        hide(pageId);
+    });
 }
 
 function showPage(pageId) {
