@@ -9,10 +9,11 @@ function show(id) {
 }
 
 function hideAllPages(){
-    var pagesIds = ["home", "skills", "languages", "projects"]
-//        initial;     conditie;       post-executie
-    for(var i = 0; i < pagesIds.length; i++) {
-            hide(pagesIds[i]);
+    var pages = document.querySelectorAll(".page");
+    for(var i = 0; i < pages.length; i++) {
+        var page = pages[i];
+        hide(page.id);
+        //hide(pages[i].id);
     } 
 }
 
