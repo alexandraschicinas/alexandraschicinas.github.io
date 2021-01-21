@@ -15,7 +15,6 @@ function hideAllPages(){
             return  page.id;
     });
     pagesIds.forEach(function(pageId){
-        console.info("hey", pageId);
         hide(pageId);
     });
 }
