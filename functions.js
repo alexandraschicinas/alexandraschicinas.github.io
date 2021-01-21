@@ -9,11 +9,14 @@ function show(id) {
 }
 
 function hideAllPages(){
-    var pages = document.querySelectorAll(".page");
-    for(var i = 0; i < pages.length; i++) {
-        var page = pages[i];
-        hide(page.id);
-        //hide(pages[i].id);
+    var pages = Array.from(document.querySelectorAll(".page"));
+    //obtinem un array normal nu un node list
+    var pagesIds = pages.map(function(page){
+            return  page.id;
+    });
+
+    for(var i = 0; i < pagesIds.length; i++) {
+        hide(pagesIds[i]);
     } 
 }
 
@@ -24,7 +27,6 @@ function showPage(pageId) {
 
 function listenMenuClicks() {
     // init events
-    console.warn('not implemented');
     document.addEventListener("click", function(e){
         var link = e.target;
         if(link.matches("#top-meniu-bar a") ) {
