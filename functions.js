@@ -21,3 +21,16 @@ function showPage(pageId) {
     hideAllPages();
     show(pageId);
 }
+
+function listenMenuClicks() {
+    // init events
+    console.warn('not implemented');
+    document.addEventListener("click", function(e){
+        var link = e.target;
+        if(link.matches("#top-meniu-bar a") ) {
+            var id = link.innerHTML.toLowerCase();
+            showPage(id);
+        }
+    });
+}
+listenMenuClicks();
