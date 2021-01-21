@@ -17,22 +17,7 @@ function hideAllPages(){
     } 
 }
 
-function showPageHome() {
+function showPage(pageId) {
     hideAllPages();
-    show('home');
-}
-
-function showSkillsPage() {
-    hideAllPages();
-    show('skills');
-}
-
-function showLanguagesPage() {
-    hideAllPages();
-    show('languages');
-}
-
-function showProjectsPage() {
-    hideAllPages();
-    show("projects");
+    show(pageId);
 }
