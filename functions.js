@@ -10,12 +10,9 @@ function show(id) {
 
 function hideAllPages(){
     var pages = Array.from(document.querySelectorAll(".page"));
-    //obtinem un array normal nu un node list
-    var pagesIds = pages.map(function(page){
-            return  page.id;
-    });
-    pagesIds.forEach(function(pageId){
-        hide(pageId);
+    //obtinem un array normal dintr-un node list
+    pages.forEach(function(page){
+         hide(page.id);
     });
 }
 
