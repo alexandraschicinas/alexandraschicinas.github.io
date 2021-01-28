@@ -41,12 +41,15 @@ var allSkills = [
     { name: 'JS', favorite: true, endorsements: 7 }
     
 ];
+function showSkills(skills){
+    var allSkillsHtml = skills.map(function(skill){
+        // TODO class="favorite-skill";
+        return `<li>${skill.name} <span>(${skill.endorsements})</span></li>`;
+    })
+    
+    var skillsEl = document.querySelector('#skills ul');
+    skillsEl.innerHTML = allSkillsHtml.join('');
+}
+showSkills(allSkills);
 
-// TODO class="favorite-skill";
-var allSkillsHtml = allSkills.map(function(skill){
-    return `<li>${skill.name} <span>(${skill.endorsements})</span></li>`;
-})
-
-var skillsEl = document.querySelector('#skills ul');
-skillsEl.innerHTML = allSkillsHtml.join('');
 
