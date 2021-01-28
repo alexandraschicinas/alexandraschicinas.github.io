@@ -36,11 +36,16 @@ listenMenuClicks();
 showPage('skills');
 
 var allSkills = [`
-    <li class="favorite-skill">HTML</li>`,
-    `<li>CSS</li>`,
-    `<li class="favorite-skill">Javascript</li>
-`];
+    HTML`,
+    `CSS`,
+    `Javascript`
+];
+
+// TODO class="favorite-skill";
+var allSkillsHtml = allSkills.map(function(skill){
+    return `<li>`+ skill +`</li>`;
+})
 
 var skillsEl = document.querySelector('#skills ul');
-skillsEl.innerHTML = allSkills.join('');
+skillsEl.innerHTML = allSkillsHtml.join('');
 
