@@ -26,7 +26,8 @@ function listenMenuClicks() {
     document.addEventListener("click", function(e){
         var link = e.target;
         if(link.matches("#top-meniu-bar a") ) {
-            var id = link.innerHTML.toLowerCase();
+            var id = link.getAttribute("data-id");
+            console.info(id);
             showPage(id);
         }
     });
