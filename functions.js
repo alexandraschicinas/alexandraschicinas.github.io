@@ -10,7 +10,6 @@ function show(id) {
 
 function hideAllPages(){
     var pages = Array.from(document.querySelectorAll(".page"));
-    //obtinem un array normal dintr-un node list
     pages.forEach(function(page){
          hide(page.id);
     });
@@ -27,7 +26,6 @@ function listenMenuClicks() {
         var link = e.target;
         if(link.matches("#top-meniu-bar a") ) {
             var id = link.getAttribute("data-id");
-            console.info(id);
             showPage(id);
         }
     });
@@ -37,20 +35,25 @@ listenMenuClicks();
 showPage('skills');
 
 var allSkills = [
-    { name: 'HTML', favorite: true, endorsements: 5 },
-    { name: 'CSS', favorite:false, endorsements: 5 },
-    { name: 'JS', favorite: true, endorsements: 7 }
-    
-];
+]; 
 function showSkills(skills){
     var allSkillsHtml = skills.map(function(skill){
-        // TODO class="favorite-skill";
         return `<li>${skill.name} <span>(${skill.endorsements})</span></li>`;
     })
     
     var skillsEl = document.querySelector('#skills ul');
     skillsEl.innerHTML = allSkillsHtml.join('');
 }
-showSkills(allSkills);
+
+fetch("skills.json")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(skills) {
+        console.warn("done",skills);
+        showSkills(skills);
+    });
+
+// showSkills(allSkills);
 
 
