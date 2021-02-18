@@ -10,9 +10,7 @@ function show(id) {
 
 function hideAllPages(){
     const pages = Array.from(document.querySelectorAll(".page"));
-    pages.forEach(page => {
-         hide(page.id);
-    });
+    pages.forEach(page => hide(page.id));
 }
 
 function showPage(pageId) {
@@ -47,9 +45,7 @@ function showSkills(skills){
 }
 
 fetch("skills.json")
-    .then(response => {
-        return response.json();
-    })
+    .then(response => response.json())
     .then(skills => {
         skills.sort((s1,s2) => {
             return s2.endorsements - s1.endorsements;
