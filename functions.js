@@ -1,15 +1,15 @@
 function hide(id) {
-    var el = document.getElementById(id);
+    const el = document.getElementById(id);
     el.style.display = 'none';
 }
 
 function show(id) {
-    var el = document.getElementById(id);
+    const el = document.getElementById(id);
     el.style.display = '';
 }
 
 function hideAllPages(){
-    var pages = Array.from(document.querySelectorAll(".page"));
+    const pages = Array.from(document.querySelectorAll(".page"));
     pages.forEach(function(page){
          hide(page.id);
     });
@@ -21,11 +21,10 @@ function showPage(pageId) {
 }
 
 function listenMenuClicks() {
-    // init events
     document.addEventListener("click", function(e){
-        var link = e.target;
+        const link = e.target;
         if(link.matches("#top-meniu-bar a") ) {
-            var id = link.getAttribute("data-id");
+            const id = link.getAttribute("data-id");
             showPage(id);
         }
     });
@@ -34,16 +33,16 @@ listenMenuClicks();
 
 showPage('skills');
 
-var allSkills = []; 
+let allSkills = []; 
 function showSkills(skills){
-    var allSkillsHtml = skills.map(function(skill){
-        var cls = skill.favorite ? "favorite-skill": "";
+    const allSkillsHtml = skills.map(function(skill){
+        const cls = skill.favorite ? "favorite-skill": "";
         return `<li class="${cls}">
                 ${skill.name} <span>(${skill.endorsements})</span>
                 </li>`;
     })
     
-    var skillsEl = document.querySelector('#skills ul');
+    const skillsEl = document.querySelector('#skills ul');
     skillsEl.innerHTML = allSkillsHtml.join('');
 }
 
@@ -55,9 +54,11 @@ fetch("skills.json")
         skills.sort(function(s1,s2) {
             return s2.endorsements - s1.endorsements;
         })
+        allSkills = skills;
         showSkills(skills);
     });
 
 // showSkills(allSkills);
+
 
 
